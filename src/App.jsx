@@ -1,12 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
 
 function App() {
 
   return (
-    <>
-      <div className="text-blue-300 text-3xl">
-        123
-      </div>
-    </>
+    <main className="mx-auto max-w-[1080px] bg-prime-bg h-screen flex flex-col justify-between">
+      <BrowserRouter>
+        <Navbar />
+        <Routes >
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </main>
   )
 }
 
